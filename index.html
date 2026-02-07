@@ -290,6 +290,237 @@
             transform: translateY(-2px);
         }
 
+        /* Social Navigation Section */
+        .social-nav {
+            background-color: #a1b7e2;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            background-color: #089bd8;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-link:hover {
+            background-color: #5a76b1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .social-link.discord {
+            background-color: #5865F2;
+        }
+
+        .social-link.github {
+            background-color: #0c0c14;
+        }
+
+        .social-link.facebook {
+            background-color: #1877F2;
+        }
+
+        .social-link.discord:hover,
+        .social-link.github:hover,
+        .social-link.facebook:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        /* Product Detail Description */
+        .product-detail-description {
+            background-color: #97adcc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .product-detail-description h3 {
+            color: #0c0c14;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .product-origin {
+            color: #089bd8;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .product-detail-text {
+            color: #0c0c14;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        /* Buy Section */
+        .buy-section {
+            background-color: #97adcc;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .buy-btn {
+            background-color: #04cb5;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .buy-btn:hover {
+            background-color: #089bd8;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(4, 203, 181, 0.4);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(12, 12, 20, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #a1b7e2;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            color: #0c0c14;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .caution-message {
+            background-color: #ffa500;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-align: center;
+            border: 3px solid #ff8c00;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-link {
+            background-color: #089bd8;
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contact-link:hover {
+            background-color: #5a76b1;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .contact-link.messenger {
+            background-color: #0084FF;
+        }
+
+        .contact-link.telegram {
+            background-color: #0088cc;
+        }
+
+        .contact-link.discord {
+            background-color: #5865F2;
+        }
+
+        .close-modal {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            width: 100%;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background-color: #cc0000;
+        }
+
         @media (max-width: 768px) {
             .pros-cons-container {
                 grid-template-columns: 1fr;
@@ -321,6 +552,21 @@
     <div class="container">
         <!-- Home Page -->
         <div class="home-page" id="homePage">
+            <!-- Social Navigation -->
+            <div class="social-nav">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" class="social-link discord">
+                        <span>💬</span> Discord
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="social-link github">
+                        <span>⚡</span> GitHub
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="social-link facebook">
+                        <span>👥</span> Facebook
+                    </a>
+                </div>
+            </div>
+            
             <div class="products-grid" id="productsGrid"></div>
         </div>
 
@@ -331,13 +577,71 @@
         </div>
     </div>
 
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <h2 class="modal-header">Choose Contact Method</h2>
+            <div class="caution-message">
+                ⚠️ CAUTION: Ordering this product requires you to message the seller for availability
+            </div>
+            <div class="contact-options">
+                <a href="https://google.com" target="_blank" class="contact-link messenger">
+                    <span>📱</span> Messenger
+                </a>
+                <a href="https://google.com" target="_blank" class="contact-link telegram">
+                    <span>✈️</span> Telegram
+                </a>
+                <a href="https://google.com" target="_blank" class="contact-link discord">
+                    <span>💬</span> Discord
+                </a>
+            </div>
+            <button class="close-modal" id="closeModal">Cancel</button>
+        </div>
+    </div>
+
     <script>
+        // Generate random product description
+        function generateDescription() {
+            const words = [
+                'innovative', 'premium', 'quality', 'durable', 'exceptional', 'advanced', 'professional',
+                'reliable', 'efficient', 'modern', 'sleek', 'powerful', 'versatile', 'lightweight',
+                'comfortable', 'stylish', 'ergonomic', 'sustainable', 'affordable', 'cutting-edge',
+                'revolutionary', 'superior', 'optimized', 'enhanced', 'manufactured', 'designed',
+                'engineered', 'crafted', 'performance', 'technology', 'features', 'materials',
+                'construction', 'finish', 'standards', 'precision', 'excellence', 'functionality',
+                'aesthetics', 'components', 'specifications', 'warranty', 'satisfaction', 'customers',
+                'market', 'industry', 'solutions', 'applications', 'compatible', 'integrated',
+                'seamless', 'intuitive', 'user-friendly', 'robust', 'compact', 'portable',
+                'energy-efficient', 'eco-friendly', 'smart', 'intelligent', 'automated', 'customizable',
+                'flexible', 'scalable', 'proven', 'tested', 'certified', 'approved', 'recommended',
+                'trusted', 'established', 'recognized', 'leading', 'pioneering', 'breakthrough',
+                'state-of-the-art', 'next-generation', 'high-performance', 'long-lasting', 'maintenance-free',
+                'hassle-free', 'convenient', 'practical', 'functional', 'dependable', 'consistent',
+                'accurate', 'responsive', 'dynamic', 'adaptable', 'comprehensive', 'complete',
+                'ultimate', 'perfect', 'ideal', 'excellent', 'outstanding', 'remarkable', 'impressive'
+            ];
+            
+            let description = 'This product represents ';
+            const numWords = 100;
+            
+            for (let i = 0; i < numWords; i++) {
+                description += words[Math.floor(Math.random() * words.length)] + ' ';
+                if (i % 15 === 14 && i < numWords - 1) {
+                    description += 'and ';
+                }
+            }
+            
+            return description.trim() + '.';
+        }
+
         // Product data
         const products = Array.from({length: 20}, (_, i) => ({
             id: i + 1,
             name: `Product ${i + 1}`,
             price: '$0.00',
             description: 'This product is useful',
+            detailedDescription: generateDescription(),
+            origin: 'China',
             pros: [
                 'High quality materials',
                 'Durable construction',
@@ -383,6 +687,16 @@
                     </div>
                 </div>
                 
+                <div class="product-detail-description">
+                    <h3>Description</h3>
+                    <div class="product-origin">From: ${product.origin}</div>
+                    <div class="product-detail-text">${product.detailedDescription}</div>
+                </div>
+
+                <div class="buy-section">
+                    <button class="buy-btn" onclick="openContactModal()">🛒 Buy Now</button>
+                </div>
+                
                 <div class="pros-cons-container">
                     <div class="pros-section">
                         <h3>Pros</h3>
@@ -418,9 +732,27 @@
             window.scrollTo(0, 0);
         }
 
+        // Open contact modal
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('active');
+        }
+
+        // Close contact modal
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('active');
+        }
+
         // Event listeners
         document.getElementById('backBtn').addEventListener('click', goHome);
         document.getElementById('homeBtn').addEventListener('click', goHome);
+        document.getElementById('closeModal').addEventListener('click', closeContactModal);
+        
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContactModal();
+            }
+        });
 
         // Initialize
         renderProducts();
